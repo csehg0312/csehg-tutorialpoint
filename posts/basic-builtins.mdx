@@ -23,36 +23,48 @@ print(3.14)
 The `type()` function returns the data type of a variable or value.
 
 ```python
-print(type("Hello"))  # <class 'str'>
-print(type(42))       # <class 'int'>
-print(type(3.14))     # <class 'float'>
+print(type("Hello"))  
+# <class 'str'>
+print(type(42))       
+# <class 'int'>
+print(type(3.14))     
+# <class 'float'>
 ```
 
 ### `len()`
 The `len()` function returns the number of items in a container, such as a string, list, or dictionary.
 
 ```python
-print(len("Hello"))            # 5
-print(len([1, 2, 3, 4, 5]))    # 5
-print(len({"name": "Alice"}))  # 1
+print(len("Hello"))            
+# 5
+print(len([1, 2, 3, 4, 5]))    
+# 5
+print(len({"name": "Alice"}))  
+# 1
 ```
 
 ### `max()` and `min()`
 The `max()` function returns the largest item in an iterable or the largest of multiple arguments. The `min()` function returns the smallest item.
 
 ```python
-print(max(1, 2, 3, 4, 5))  # 5
-print(min(1, 2, 3, 4, 5))  # 1
-print(max([1, 2, 3]))      # 3
-print(min([1, 2, 3]))      # 1
+print(max(1, 2, 3, 4, 5))  
+# 5
+print(min(1, 2, 3, 4, 5))  
+# 1
+print(max([1, 2, 3]))      
+# 3
+print(min([1, 2, 3]))     
+# 1
 ```
 
 ### `sum()`
 The `sum()` function returns the sum of all items in an iterable.
 
 ```python
-print(sum([1, 2, 3, 4, 5]))  # 15
-print(sum((1, 2, 3)))        # 6
+print(sum([1, 2, 3, 4, 5]))  
+# 15
+print(sum((1, 2, 3)))        
+# 6
 ```
 
 ### `input()`
@@ -79,8 +91,10 @@ def greet(name):
 Call the function by using its name followed by parentheses. If the function requires parameters, provide them inside the parentheses.
 
 ```python
-greet("Alice")  # Output: Hello, Alice!
-greet("Bob")    # Output: Hello, Bob!
+greet("Alice")  
+# Output: Hello, Alice!
+greet("Bob")    
+# Output: Hello, Bob!
 ```
 
 ### Function with Return Value
@@ -91,7 +105,8 @@ def add(a, b):
     return a + b
 
 result = add(3, 4)
-print(result)  # Output: 7
+print(result)  
+# Output: 7
 ```
 
 ### Function with Default Parameters
@@ -101,8 +116,10 @@ You can provide default values for parameters. If no argument is passed, the def
 def greet(name="Guest"):
     print("Hello, " + name + "!")
 
-greet("Alice")  # Output: Hello, Alice!
-greet()         # Output: Hello, Guest!
+greet("Alice")  
+# Output: Hello, Alice!
+greet()         
+# Output: Hello, Guest!
 ```
 
 ### Function with Variable Number of Arguments
@@ -113,13 +130,15 @@ def print_numbers(*args):
     for number in args:
         print(number)
 
-print_numbers(1, 2, 3, 4)  # Output: 1 2 3 4
+print_numbers(1, 2, 3, 4)  
+# Output: 1 2 3 4
 
 def print_info(**kwargs):
     for key, value in kwargs.items():
         print(f"{key}: {value}")
 
-print_info(name="Alice", age=25)  # Output: name: Alice age: 25
+print_info(name="Alice", age=25)  
+# Output: name: Alice age: 25
 ```
 
 ## Summary

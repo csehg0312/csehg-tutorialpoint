@@ -57,10 +57,14 @@ pip install scikit-learn
 Here's a simple example of using scikit-learn to create a linear regression model.
 
 ```python
-from sklearn.linear_model import LinearRegression
-
 # Sample data
-X = [[1], [2], [3], [4], [5]]
+X = [
+    [1], 
+    [2], 
+    [3], 
+    [4], 
+    [5]
+    ]
 y = [1, 2, 3, 4, 5]
 
 # Create and train the model
@@ -68,8 +72,14 @@ model = LinearRegression()
 model.fit(X, y)
 
 # Make predictions
-predictions = model.predict([[6], [7]])
-print(predictions)  # Output: [6. 7.]
+predictions = model.predict(
+    [
+        [6], 
+        [7]
+        ]
+    )
+print(predictions)  
+# Output: [6. 7.]
 ```
 
 ### TensorFlow
@@ -85,12 +95,15 @@ pip install tensorflow
 Here's a basic example of creating a neural network using TensorFlow.
 
 ```python
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
 
 # Sample data
-X = [[1], [2], [3], [4], [5]]
+X = [
+    [1], 
+    [2], 
+    [3], 
+    [4], 
+    [5]
+    ]
 y = [1, 2, 3, 4, 5]
 
 # Create the model
@@ -99,13 +112,21 @@ model = Sequential([
 ])
 
 # Compile the model
-model.compile(optimizer='sgd', loss='mean_squared_error')
+model.compile(
+    optimizer='sgd', 
+    loss='mean_squared_error'
+    )
 
 # Train the model
 model.fit(X, y, epochs=100)
 
 # Make predictions
-predictions = model.predict([[6], [7]])
+predictions = model.predict(
+    [
+        [6], 
+        [7]
+    ]
+)
 print(predictions)
 ```
 
@@ -127,14 +148,36 @@ import torch.nn as nn
 import torch.optim as optim
 
 # Sample data
-X = torch.tensor([[1.0], [2.0], [3.0], [4.0], [5.0]])
-y = torch.tensor([[1.0], [2.0], [3.0], [4.0], [5.0]])
+X = torch.tensor(
+    [
+        [1.0], 
+        [2.0], 
+        [3.0], 
+        [4.0], 
+        [5.0]
+        ]
+    )
+y = torch.tensor(
+    [
+        [1.0],
+        [2.0], 
+        [3.0], 
+        [4.0], 
+        [5.0]
+        ]
+    )
 
 # Define the model
 class SimpleNN(nn.Module):
     def __init__(self):
-        super(SimpleNN, self).__init__()
-        self.linear = nn.Linear(1, 1)
+        super(
+            SimpleNN, 
+            self
+        ).__init__()
+        self.linear = nn.Linear(
+            1, 
+            1
+            )
 
     def forward(self, x):
         return self.linear(x)
@@ -143,19 +186,32 @@ model = SimpleNN()
 
 # Define loss and optimizer
 criterion = nn.MSELoss()
-optimizer = optim.SGD(model.parameters(), lr=0.01)
+optimizer = optim.SGD(
+    model.parameters(), 
+    lr=0.01
+    )
 
 # Train the model
 for epoch in range(100):
     optimizer.zero_grad()
     outputs = model(X)
-    loss = criterion(outputs, y)
+    loss = criterion(
+        outputs, 
+        y
+        )
     loss.backward()
     optimizer.step()
 
 # Make predictions
 with torch.no_grad():
-    predictions = model(torch.tensor([[6.0], [7.0]]))
+    predictions = model(
+        torch.tensor(
+            [
+                [6.0], 
+                [7.0]
+                ]
+            )
+        )
 print(predictions)
 ```
 
