@@ -8,6 +8,13 @@
 # testing
 /coverage
 
+/.nix/
+
+.prettierrc.js
+
+package-lock.json
+github-banner.svg
+
 # next.js
 /.next/
 /out/

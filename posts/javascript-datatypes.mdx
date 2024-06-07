@@ -4,8 +4,6 @@ description: "JavaScript is a dynamically typed language, which means variables 
 date: Mar 3 2024
 ---
 
-import CodeBlock from '../components/CodeBlock.js'
-
 ## Primitive Data Types
 
 JavaScript has six primitive data types:
@@ -13,85 +11,92 @@ JavaScript has six primitive data types:
 ### 1. **String**
 A sequence of characters used to represent text. Strings can be created using single, double, or backticks quotes.
 
-<CodeBlock>
-{`let name = 'John';
+```javascript
+let name = 'John';
 let greeting = "Hello, World!";
-let template = \`My name is \${name}\`;`}
-</CodeBlock>
+let template = `My name is ${name}`;
+```
 
 ### 2. **Number**
 Represents both integer and floating-point numbers. JavaScript does not differentiate between the two.
 
-<CodeBlock>
-{`let age = 30;
-let price = 19.99;`}
-</CodeBlock>
+```javascript
+let age = 30;
+let price = 19.99;
+```
 
 ### 3. **Boolean**
 Represents a logical entity and can have only two values: `true` or `false`.
 
-<CodeBlock>
-{`let isAvailable = true;
-let isCompleted = false;`}
-</CodeBlock>
+```javascript
+let isAvailable = true;
+let isCompleted = false;
+```
 
 ### 4. **Null**
 Represents the intentional absence of any object value. It is one of JavaScript's primitive values.
 
-<CodeBlock>
-{`let result = null;`}
-</CodeBlock>
+```javascript
+let result = null;
+```
 
 ### 5. **Undefined**
 A variable that has been declared but has not yet been assigned a value.
 
-<CodeBlock>
-{`let x;
-console.log(x); // undefined`}
-</CodeBlock>
+```javascript
+let x;
+console.log(x); // undefined
+```
 
 ### 6. **Symbol**
 A unique and immutable primitive value and may be used as the key of an object property.
 
-<CodeBlock>
-{`let sym = Symbol('description');`}
-</CodeBlock>
+```javascript
+let sym = Symbol('description');
+```
 
 ## Non-Primitive Data Type
 
 ### 1. **Object**
 Objects are collections of key-value pairs. Keys are strings (or Symbols) and values can be of any type.
 
-<CodeBlock>
-{`let person = {
+```javascript
+let person = {
   name: 'John',
   age: 30,
   isEmployed: true
-};`}
-</CodeBlock>
+};
+```
 
 ### 2. **Array**
 Arrays are a special type of object used for storing ordered collections of values.
 
-<CodeBlock>
-{`let numbers = [1, 2, 3, 4, 5];`}
-</CodeBlock>
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+```
 
 ## Type Checking
 
 Use the `typeof` operator to check the type of a variable.
 
-<CodeBlock>
-{`console.log(typeof 'Hello'); // string
+```javascript
+console.log(typeof 'Hello'); // string
 console.log(typeof 42); // number
 console.log(typeof true); // boolean
 console.log(typeof undefined); // undefined
 console.log(typeof { name: 'John' }); // object
-console.log(typeof [1, 2, 3]); // object`}
-</CodeBlock>
+console.log(typeof [1, 2, 3]); // object
+```
 
 ## Conclusion
 
 Understanding JavaScript data types is fundamental for writing robust and error-free code. Remember that JavaScript is dynamically typed, so the type of a variable can change during the execution of the program. Always use the appropriate data type for your variables and leverage the `typeof` operator for type checking.
 
 Happy coding!
+
+### Explanation:
+
+- **Primitive Data Types**: Detailed explanations and examples for string, number, boolean, null, undefined, and symbol.
+- **Non-Primitive Data Type**: Examples of objects and arrays.
+- **Type Checking**: Demonstrates how to use the `typeof` operator to check the type of variables.
+- **Code Blocks**: Simplified using standard Markdown code blocks for easier use and readability.
