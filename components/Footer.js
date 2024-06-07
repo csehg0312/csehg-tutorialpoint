@@ -83,6 +83,7 @@ export default function Footer({ copyrightText }) {
       <p className="dark:text-white uppercase mb-3 font-bold opacity-60">
         {copyrightText}
       </p>
+      <a href="https://github.com/csehg0312/csehg-tutorialpoint" target="_blank" rel="noopener noreferrer">Github repository</a>
       <ThemeSwitcher />
     </footer>
   );
