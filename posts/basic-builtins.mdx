@@ -1,0 +1,134 @@
+---
+title: "Basic Built-in Functions and Creating Your Own Functions in Python"
+description: "An introduction to basic built-in functions in Python and how to create custom functions."
+date: May 21 2024
+---
+
+# Basic Built-in Functions and Creating Your Own Functions in Python
+
+Python provides a variety of built-in functions that make it easy to perform common tasks. Additionally, you can create your own functions to encapsulate reusable pieces of code. Let's explore some of the basic built-in functions and learn how to create custom functions.
+
+## Basic Built-in Functions
+
+### `print()`
+The `print()` function outputs text or other data to the console.
+
+```python
+print("Hello, World!")
+print(42)
+print(3.14)
+```
+
+### `type()`
+The `type()` function returns the data type of a variable or value.
+
+```python
+print(type("Hello"))  # <class 'str'>
+print(type(42))       # <class 'int'>
+print(type(3.14))     # <class 'float'>
+```
+
+### `len()`
+The `len()` function returns the number of items in a container, such as a string, list, or dictionary.
+
+```python
+print(len("Hello"))            # 5
+print(len([1, 2, 3, 4, 5]))    # 5
+print(len({"name": "Alice"}))  # 1
+```
+
+### `max()` and `min()`
+The `max()` function returns the largest item in an iterable or the largest of multiple arguments. The `min()` function returns the smallest item.
+
+```python
+print(max(1, 2, 3, 4, 5))  # 5
+print(min(1, 2, 3, 4, 5))  # 1
+print(max([1, 2, 3]))      # 3
+print(min([1, 2, 3]))      # 1
+```
+
+### `sum()`
+The `sum()` function returns the sum of all items in an iterable.
+
+```python
+print(sum([1, 2, 3, 4, 5]))  # 15
+print(sum((1, 2, 3)))        # 6
+```
+
+### `input()`
+The `input()` function reads a string from user input.
+
+```python
+name = input("Enter your name: ")
+print("Hello, " + name + "!")
+```
+
+## Creating Your Own Functions
+
+You can create your own functions to encapsulate reusable pieces of code. This helps in organizing and managing your code better.
+
+### Defining a Function
+Use the `def` keyword to define a function, followed by the function name and parentheses. Inside the parentheses, you can specify parameters. The function body is indented.
+
+```python
+def greet(name):
+    print("Hello, " + name + "!")
+```
+
+### Calling a Function
+Call the function by using its name followed by parentheses. If the function requires parameters, provide them inside the parentheses.
+
+```python
+greet("Alice")  # Output: Hello, Alice!
+greet("Bob")    # Output: Hello, Bob!
+```
+
+### Function with Return Value
+A function can return a value using the `return` statement.
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(3, 4)
+print(result)  # Output: 7
+```
+
+### Function with Default Parameters
+You can provide default values for parameters. If no argument is passed, the default value is used.
+
+```python
+def greet(name="Guest"):
+    print("Hello, " + name + "!")
+
+greet("Alice")  # Output: Hello, Alice!
+greet()         # Output: Hello, Guest!
+```
+
+### Function with Variable Number of Arguments
+Use `*args` to allow a function to accept any number of positional arguments, and `**kwargs` to accept keyword arguments.
+
+```python
+def print_numbers(*args):
+    for number in args:
+        print(number)
+
+print_numbers(1, 2, 3, 4)  # Output: 1 2 3 4
+
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_info(name="Alice", age=25)  # Output: name: Alice age: 25
+```
+
+## Summary
+
+- **Built-in Functions**: `print()`, `type()`, `len()`, `max()`, `min()`, `sum()`, `input()`
+- **Defining Functions**: Use `def` to define a function, provide parameters if needed.
+- **Calling Functions**: Use the function name followed by parentheses, providing arguments if required.
+- **Return Values**: Use `return` to send back a result from a function.
+- **Default Parameters**: Provide default values for parameters.
+- **Variable Arguments**: Use `*args` for positional arguments and `**kwargs` for keyword arguments.
+
+Understanding and using functions effectively allows you to write modular, reusable, and organized code. Practice creating and calling your own functions to get comfortable with this fundamental concept in Python.
